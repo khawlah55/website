@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فرص العمل الجزئي</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/flaticon.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .main-header {
+            background: linear-gradient(135deg, #9b59b6, #8e44ad);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .main-header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-links li {
+            margin: 0;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #f0f0f0;
+        }
+
+        .lang-btn-container {
+            display: flex;
+            justify-content: flex-start; 
+            padding: 10px 20px;
+        }
+
+        .lang-btn {
+            background: #fff;
+            color: #8e44ad;
+            border: 2px solid #8e44ad;
+            border-radius: 10px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn i {
+            font-size: 1.2rem;
+        }
+
+        .lang-btn:hover {
+            background: #8e44ad;
+            color: white;
+        }
+
+        #volunteer1 {
+            padding: 50px 20px;
+            background-color: #ffffff;
+            text-align: center;
+        }
+
+        #volunteer1 h2 {
+            font-size: 28px;
+            color: #8e44ad;
+            margin-bottom: 20px;
+        }
+
+        #volunteer1 p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .opportunity-list {
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: space-between; 
+            gap: 20px;
+        }
+
+        .opportunity-item {
+            background: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 300px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .opportunity-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .opportunity-item h3 {
+            font-size: 20px;
+            color: #8e44ad;
+            margin-bottom: 10px;
+        }
+
+        .opportunity-item p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .interactive-btn {
+            background: linear-gradient(135deg, #8e44ad, #9b59b6);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .interactive-btn:hover {
+            background: linear-gradient(135deg, #9b59b6, #8e44ad);
+        }
+
+        .small-btn {
+            font-size: 14px;
+            padding: 8px 16px;
+            margin-top: 20px;
+        }
+
+        .opportunity-details {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .icon {
+            font-size: 18px;
+        }
+        .main-footer {
+        background: linear-gradient(to right, #6a1b9a, #8e24aa, #ab47bc);
+        color: #f3e5f5;
+        padding: 40px 20px;
+        font-family: "Tajawal", sans-serif;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .footer-about,
+    .footer-links,
+    .footer-contact {
+        flex: 1;
+        margin: 10px;
+        min-width: 250px;
+    }
+
+    .footer-about h3,
+    .footer-links h3,
+    .footer-contact h3 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+        color: #e1bee7;
+    }
+
+    .footer-about p,
+    .footer-contact p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .footer-links ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-links ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer-links ul li a {
+        color: #f3e5f5;
+        text-decoration: none;
+        font-size: 0.9rem;
+    }
+
+    .footer-links ul li a:hover {
+        color: #d1c4e9;
+        text-decoration: underline;
+    }
+
+    .social-icons a {
+        margin-right: 10px;
+        display: inline-block;
+    }
+
+    .social-icons img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 0.9rem;
+        border-top: 1px solid #7e57c2;
+        padding-top: 10px;
+        color: #d1c4e9;
+        .lang-btn {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background-color 0.3s ease;
+    }
+       }
+       body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: #8e44ad;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.lang-btn-container {
+    display: flex;
+    justify-content: flex-start; /* زر على الجهة اليسرى */
+    padding: 10px 20px; /* مسافة من الحافة */
+}
+
+.lang-btn {
+    background: #fff;
+    color: #8e44ad;
+    border: 2px solid #8e44ad;
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.lang-btn i {
+    font-size: 1.2rem;
+}
+
+.lang-btn:hover {
+    background: #8e44ad;
+    color: white;
+}
+section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            margin: 15px;
+            display: inline-block;
+            width: 250px;
+        }
+
+        .card h3 {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #8e44ad;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background: #8e44ad;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #9b59b6;
+        }
+
+        /* مربع الحوار */
+        .dialog-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .dialog-box {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 300px;
+        }
+
+        .dialog-box h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .dialog-box button {
+            padding: 10px 20px;
+            background: #8e44ad;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .dialog-box button:hover {
+            background: #9b59b6;
+        }
+
+    </style>
+</head>
+<header class="main-header">
+        <nav class="container">
+            <h1 class="logo">
+                <img src="images/time-management.png" alt="منصة العمل الجزئي للطلاب">
+              </h1>
+            <ul class="nav-links">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="index.html">فوائد العمل الجزئي</a></li>
+                <li><a href="#volunteer1">الوظائف</a></li>
+                <li><a href="contactus.html">تواصل معنا</a></li>
+                <button id="language-toggle" class="lang-btn">
+                <i class="fas fa-globe"></i>
+                </button>                                               
+            </ul>
+        </nav>
+    </header>
+<body>
+    <section id="volunteer1">
+        <h2>فرص العمل الجزئي</h2>
+        <p>اكتشف فرص العمل لدعم المجتمع والعمل على تحسين مهاراتك.</p>
+        <div class="opportunity-list">
+            <div class="opportunity-item">
+                <h3> الجهة: جمعية الإغاثة</h3>
+                <p>الوظيفة: مساند إداري</p>
+                <p>وصف الوظيفة: ترتيب الملفات، إدخال البيانات، ومساعدة فريق العمل</p>
+                <div class="opportunity-details">
+                    <i class="fas fa-money-bill-alt icon"></i> 300 ريال
+                </div>
+                <div class="opportunity-details">
+                    <i class="fas fa-clock icon"></i> 10 ساعات
+                </div>
+                <button class="interactive-btn" onclick="showDialog('جمعية الإغاثة')">انضم الآن</button>
+            </div>
+            <div class="opportunity-item">
+                <h3>الجهة: نون</h3>
+                <p>الوظيفة: مندوب توصيل</p>
+                <p>وصف الوظيفة: توصيل الطلبات إلى العملاء باستخدام وسائل النقل الشخصية</p>
+                <div class="opportunity-details">
+                    <i class="fas fa-money-bill-alt icon"></i> 300 ريال
+                </div>
+                <div class="opportunity-details">
+                    <i class="fas fa-clock icon"></i> 10 ساعات
+                </div>
+                <button class="interactive-btn" onclick="showDialog('نون')">انضم الآن</button>
+            </div>
+            <div class="opportunity-item">
+                <h3>الجهة: مطاعم ماكدونالدز</h3>
+                <p>الوظيفة: موظف خدمة عملاء </p>
+                <p>وصف الوظيفة: استقبال الطلبات، خدمة العملاء، وتحضير الطعام</p>
+                <div class="opportunity-details">
+                    <i class="fas fa-money-bill-alt icon"></i> 300 ريال
+                </div>
+                <div class="opportunity-details">
+                    <i class="fas fa-clock icon"></i> 10 ساعات
+                </div>
+                <button class="interactive-btn" onclick="showDialog('مطاعم ماكدونالدز ')">انضم الآن</button>
+            </div>
+            <div class="opportunity-item">
+                <h3>اسم الجهة: مكتبة جرير</h3>
+                <p>الزظيفة: مساعد مبيعات</p>
+                <p>وصف الوظيفة: مساعدة العملاء في اختيار المنتجات وترتيب الأرفف</p>
+                <div class="opportunity-details">
+                    <i class="fas fa-money-bill-alt icon"></i> 400 ريال
+                </div>
+                <div class="opportunity-details">
+                    <i class="fas fa-clock icon"></i> 12 ساعة
+                </div>
+                <button class="interactive-btn" onclick="showDialog('مكتبة جرير')">انضم الآن</button>
+            </div>
+            <div class="opportunity-item">
+                <h3>اسم الجهة: موسم الرياض</h3>
+                <p> الوظيفة: منظم فعاليات</p>
+                <p>صوف الوظيفة: تنظيم الأنشطة وإرشاد الزوار داخل الفعاليات</p>
+                <div class="opportunity-details">
+                    <i class="fas fa-money-bill-alt icon"></i> 350 ريال
+                </div>
+                <div class="opportunity-details">
+                    <i class="fas fa-clock icon"></i> 12 ساعة
+                </div>
+                <button class="interactive-btn" onclick="showDialog('موسم الرياض')">انضم الآن</button>
+            </div>
+            <div class="opportunity-item">
+                <h3> اسم الجهة:هنقرستيشن</h3>
+                <p>الوظيفة : مندوب توصيل</p>
+                <p>وصف الوظيفة: توصيل الطعام من المطاعم إلى العملاء</p>
+                <div class="opportunity-details">
+                    <i class="fas fa-money-bill-alt icon"></i> 350 ريال
+                </div>
+                <div class="opportunity-details">
+                    <i class="fas fa-clock icon"></i> 12 ساعة
+                </div>
+                <button class="interactive-btn" onclick="showDialog('هنقرستيشن')">انضم الآن</button>
+            </div>
+            <div class="opportunity-item">
+                <h3>اسم الجهة: ستاربكس </h3>
+                <p>الوظيفة: باريستا</p>
+                <p>وصف الوظيفة: تحضير القهوة والمشروبات، خدمة العملاء، والحفاظ على نظافة المكان.</p>
+                <div class="opportunity-details">
+                    <i class="fas fa-money-bill-alt icon"></i> 150 ريال
+                </div>
+                <div class="opportunity-details">
+                    <i class="fas fa-clock icon"></i> 4 ساعة
+                </div>
+                <button class="interactive-btn" onclick="showDialog('ستاربكس')">انضم الآن</button>
+            </div>
+            <div class="opportunity-item">
+                <h3>اسم الجهة: إكسترا </h3>
+                <p>الوظيفة: موظف مبيعات</p>
+                <p>وصف الوظيفة: شرح المنتجات الإلكترونية للعملاء وتحقيق أهداف المبيعات</p>
+                <div class="opportunity-details">
+                    <i class="fas fa-money-bill-alt icon"></i> 150 ريال
+                </div>
+                <div class="opportunity-details">
+                    <i class="fas fa-clock icon"></i> 8 ساعة
+                </div>
+                <button class="interactive-btn" onclick="showDialog('إكسترا')">انضم الآن</button>
+            </div>
+            
+        </div>
+        <a href="home.html"><button class="interactive-btn small-btn">عودة إلى الرئيسية</button></a>
+    </section>
+    <!-- مربع الحوار -->
+    <div class="dialog-overlay" id="dialog">
+        <div class="dialog-box">
+            <h3 id="dialog-message">هل أنت متأكد من الإنضمام إلى الفرصة الوظيفية؟</h3>
+            <button onclick="closeDialog(); window.location.href='signup.html';">انضم الآن</button>
+            <button onclick="closeDialog();">إغلاق</button>
+        </div>
+    </div>
+    
+</div>
+    <script>
+      // تحديد الزر
+      window.onload = function() {
+    const languageToggle = document.getElementById('language-toggle');
+    if (languageToggle) {
+        languageToggle.addEventListener('click', toggleLanguage);
+    }
+};
+// النصوص باللغتين
+const translations = {
+    ar: {
+        home: 'الرئيسية',
+        benefits: 'فوائد العمل الجزئي',
+        jobs: 'الوظائف',
+        contact: 'تواصل معنا',
+        buttonText: 'English',
+        sectionTitle: 'فرص العمل الجزئي',
+        sectionDescription: 'اكتشف فرص العمل لدعم المجتمع والعمل على تحسين مهاراتك.',
+        backButton: 'عودة إلى الرئيسية', // نص الزر باللغة العربية
+        labels: {
+            entity: 'الجهة',
+            job: 'الوظيفة',
+            description: 'وصف الوظيفة',
+        },
+        opportunities: [
+            {
+                entity: 'جمعية الإغاثة',
+                job: 'مساند إداري',
+                description: 'ترتيب الملفات، إدخال البيانات، ومساعدة فريق العمل',
+                salary: '300 ريال',
+                hours: '10 ساعات',
+                button: 'انضم الآن',
+            },
+            {
+                entity: 'نون',
+                job: 'مندوب توصيل',
+                description: 'توصيل الطلبات إلى العملاء باستخدام وسائل النقل الشخصية',
+                salary: '300 ريال',
+                hours: '10 ساعات',
+                button: 'انضم الآن',
+            },
+            {
+                entity: 'مطاعم ماكدونالدز',
+                job: 'موظف خدمة عملاء',
+                description: 'استقبال الطلبات، خدمة العملاء، وتحضير الطعام',
+                salary: '300 ريال',
+                hours: '10 ساعات',
+                button: 'انضم الآن',
+            },
+            {
+                entity: 'مكتبة جرير',
+                job: 'مساعد مبيعات',
+                description: 'مساعدة العملاء في اختيار المنتجات وترتيب الأرفف',
+                salary: '350 ريال',
+                hours: '12 ساعة',
+                button: 'انضم الآن',
+            },
+            {
+                entity: 'موسم الرياض',
+                job: 'منظم فعاليات',
+                description: 'تنظيم الأنشطة وإرشاد الزوار داخل الفعاليات',
+                salary: '350 ريال',
+                hours: '12 ساعة',
+                button: 'انضم الآن',
+            },
+            {
+                entity: 'هنقرستيشن',
+                job: 'مندوب توصيل',
+                description: 'توصيل الطعام من المطاعم إلى العملاء',
+                salary: '350 ريال',
+                hours: '12 ساعة',
+                button: 'انضم الآن',
+            },
+            {
+                entity: 'ستاربكس',
+                job: 'باريستا',
+                description: 'تحضير القهوة والمشروبات، خدمة العملاء، والحفاظ على نظافة المكان.',
+                salary: '350 ريال',
+                hours: '12 ساعة',
+                button: 'انضم الآن',
+            },
+            {
+                entity: 'إكسترا',
+                job: 'موظف مبيعات',
+                description: 'شرح المنتجات الإلكترونية للعملاء وتحقيق أهداف المبيعات',
+                salary: '350 ريال',
+                hours: '12 ساعة',
+                button: 'انضم الآن',
+            },
+        ],
+    },
+    en: {
+        home: 'Home',
+        benefits: 'Part-time Benefits',
+        jobs: 'Jobs',
+        contact: 'Contact Us',
+        buttonText: 'العربية',
+        sectionTitle: 'Part-time Opportunities',
+        sectionDescription: 'Discover opportunities to support the community and improve your skills.',
+        backButton: 'Back to Home', // نص الزر باللغة الإنجليزية
+        labels: {
+            entity: 'Entity',
+            job: 'Job',
+            description: 'Job Description',
+        },
+        opportunities: [
+            {
+                entity: 'Relief Association',
+                job: 'Administrative Assistant',
+                description: 'Organize files, input data, and assist the team.',
+                salary: '300 SAR',
+                hours: '10 hours',
+                button: 'Join Now',
+            },
+            {
+                entity: 'Noon',
+                job: 'Delivery Representative',
+                description: 'Deliver orders to customers using personal transportation.',
+                salary: '300 SAR',
+                hours: '10 hours',
+                button: 'Join Now',
+            },
+            {
+                entity: 'McDonald\'s',
+                job: 'Customer Service Employee',
+                description: 'Take orders, serve customers, and prepare food.',
+                salary: '300 SAR',
+                hours: '10 hours',
+                button: 'Join Now',
+            },
+            {
+                entity: 'Jarir Bookstore',
+                job: 'Sales Assistant',
+                description: 'Help customers choose products and organize shelves.',
+                salary: '350 SAR',
+                hours: '12 hours',
+                button: 'Join Now',
+            },
+            {
+                entity: 'Riyadh Season',
+                job: 'Event Organizer',
+                description: 'Organize activities and guide visitors during events.',
+                salary: '350 SAR',
+                hours: '12 hours',
+                button: 'Join Now',
+            },
+            {
+                entity: 'HungerStation',
+                job: 'Delivery Representative',
+                description: 'Deliver food from restaurants to customers.',
+                salary: '350 SAR',
+                hours: '12 hours',
+                button: 'Join Now',
+            },
+            {
+                entity: 'Starbucks',
+                job: 'Barista',
+                description: 'Prepare coffee and drinks, serve customers, and maintain cleanliness.',
+                salary: '350 SAR',
+                hours: '12 hours',
+                button: 'Join Now',
+            },
+            {
+                entity: 'Extra',
+                job: 'Sales Employee',
+                description: 'Explain electronic products to customers and achieve sales goals.',
+                salary: '350 SAR',
+                hours: '12 hours',
+                button: 'Join Now',
+            },
+        ],
+    },
+};
+
+// تحديد الزر ومكوناته
+const languageToggle = document.getElementById('language-toggle');
+const icon = languageToggle.querySelector('i'); // الأيقونة فقط
+
+// اللغة الحالية
+let currentLanguage = 'ar';
+
+// تحديث نصوص القسم والمحتوى
+function updateSectionContent() {
+    const sectionTitle = document.querySelector('#volunteer1 h2');
+    const sectionDescription = document.querySelector('#volunteer1 p');
+    const opportunities = document.querySelectorAll('.opportunity-item');
+    const backButton = document.querySelector('.interactive-btn.small-btn');
+
+    // تحديث العنوان والوصف
+    sectionTitle.textContent = translations[currentLanguage].sectionTitle;
+    sectionDescription.textContent = translations[currentLanguage].sectionDescription;
+
+    // تحديث الفرص
+    opportunities.forEach((opportunity, index) => {
+        const data = translations[currentLanguage].opportunities[index];
+        const labels = translations[currentLanguage].labels;
+
+        if (data) {
+            opportunity.querySelector('h3').textContent = `${labels.entity}: ${data.entity}`;
+            opportunity.querySelectorAll('p')[0].textContent = `${labels.job}: ${data.job}`;
+            opportunity.querySelectorAll('p')[1].textContent = `${labels.description}: ${data.description}`;
+            opportunity.querySelectorAll('.opportunity-details')[0].textContent = `${data.salary}`;
+            opportunity.querySelectorAll('.opportunity-details')[1].textContent = `${data.hours}`;
+            opportunity.querySelector('button').textContent = data.button;
+        }
+    });
+
+    // تحديث نص الزر "عودة إلى الرئيسية"
+    if (backButton) {
+        backButton.textContent = translations[currentLanguage].backButton;
+    }
+}
+
+// تبديل اللغة والأيقونة
+function toggleLanguage() {
+    // تبديل اللغة
+    currentLanguage = currentLanguage === 'ar' ? 'en' : 'ar';
+
+    // تحديث الأيقونة بناءً على اللغة
+    if (currentLanguage === 'ar') {
+        icon.className = 'fas fa-globe'; // أيقونة اللغة
+    } else {
+        icon.className = 'fas fa-globe'; // أيقونة الكرة الأرضية
+    }
+
+    // تحديث باقي النصوص والمحتوى
+    updateSectionContent();
+}
+
+// ربط الزر بوظيفة التبديل
+languageToggle.addEventListener('click', toggleLanguage);
+
+// دالة لفتح مربع الحوار وتحديثه بناءً على الفرصة الوظيفية المختارة
+function showDialog(jobTitle) {
+    const dialogMessage = document.getElementById('dialog-message');
+    dialogMessage.textContent = `هل أنت متأكد من الإنضمام إلى فرصة العمل: ${jobTitle}`;
+    document.getElementById('dialog').style.display = 'flex'; // إظهار مربع الحوار
+}
+
+// دالة لإغلاق مربع الحوار
+function closeDialog() {
+    document.getElementById('dialog').style.display = 'none'; // إخفاء مربع الحوار
+}
+
+    </script>
+     <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>عن الموقع</h3>
+                <p>منصة العمل الجزئي تهدف إلى تمكين الطلاب من اكتساب الخبرات المهنية أثناء الدراسة من خلال العمل الجزئي في بيئات مرنة ومحفزة.</p>
+            </div>
+            <div class="footer-links">
+                <h3>روابط مفيدة</h3>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="index.html">فوائد العمل الجزئي</a></li>
+                    <li><a href="job.html">الوظائف</a></li>
+                    <li><a href="contactus.html">تواصل معنا</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>تواصل معنا</h3>
+                <p>البريد الإلكتروني: <a href="mailto:info@jobplatform.com">info@jobplatform.com</a></p>
+                <p>الهاتف: <a href="tel:+966500000000">+966 500 000 000</a></p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+                
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 جميع الحقوق محفوظة. منصة العمل الجزئي.</p>
+        </div>
+    </footer>
+</body>
+</html>

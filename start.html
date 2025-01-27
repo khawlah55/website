@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة العمل الجزئي للطلاب</title>
+    <link rel="stylesheet" href="start.css">
+    <style>
+        /* تنسيقات CSS */
+           * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Tajawal", sans-serif;
+            background-color: #f3e5f5;
+            color: #4a148c;
+        }
+
+        .main-header {
+            background: linear-gradient(to right, #6a1b9a, #7b1fa2);
+            color: white;
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(to right, rgba(106, 27, 154, 0.7), rgba(123, 31, 162, 0.7)), url('images/jobs.jpeg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .cta-btn {
+            background-color: #6a1b9a;
+            color:#ffffff;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .cta-btn:hover {
+            background-color: #f3e5f5;
+        }
+
+        .features {
+            padding: 40px 20px;
+            background-color: #ede7f6;
+        }
+
+        .features h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #6a1b9a;
+        }
+
+        .feature-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .feature-item {
+            background: #f3e5f5;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin: 10px;
+            flex: 1;
+            max-width: 300px;
+        }
+
+        .jobs-section {
+            background-color: #7b1fa2;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .jobs-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .jobs-header h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .jobs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .job-card {
+            background-color: #6a1b9a;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+
+        .job-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .job-card img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+        }
+
+        .job-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #f3e5f5;
+        }
+
+        .job-card p {
+            font-size: 0.9rem;
+            color: #f3e5f5;
+        }
+
+        .contact {
+            padding: 40px 20px;
+            background-color: #ede7f6;
+        }
+
+        .contact h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #6a1b9a;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .send-btn {
+            background-color: #6a1b9a;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .send-btn:hover {
+            background-color: #4a148c;
+        }
+
+    .main-footer {
+        background: linear-gradient(to right, #6a1b9a, #8e24aa, #ab47bc);
+        color: #f3e5f5;
+        padding: 40px 20px;
+        font-family: "Tajawal", sans-serif;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .footer-about,
+    .footer-links,
+    .footer-contact {
+        flex: 1;
+        margin: 10px;
+        min-width: 250px;
+    }
+
+    .footer-about h3,
+    .footer-links h3,
+    .footer-contact h3 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+        color: #e1bee7;
+    }
+
+    .footer-about p,
+    .footer-contact p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .footer-links ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-links ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer-links ul li a {
+        color: #f3e5f5;
+        text-decoration: none;
+        font-size: 0.9rem;
+    }
+
+    .footer-links ul li a:hover {
+        color: #d1c4e9;
+        text-decoration: underline;
+    }
+
+    .social-icons a {
+        margin-right: 10px;
+        display: inline-block;
+    }
+
+    .social-icons img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 0.9rem;
+        border-top: 1px solid #7e57c2;
+        padding-top: 10px;
+        color: #d1c4e9;
+    }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .section-container {
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #9b59b6, #8e44ad);
+            color: #ffffff;
+        }
+
+        .section-title {
+            font-size: 28px;
+            color: #ffffff;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .cards-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.2);
+            border: none;
+            border-radius: 12px;
+            width: 300px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            color: #ffffff;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .card img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 15px;
+        }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .card-description {
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        .main-footer {
+        background: linear-gradient(to right, #6a1b9a, #8e24aa, #ab47bc);
+        color: #f3e5f5;
+        padding: 40px 20px;
+        font-family: "Tajawal", sans-serif;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .footer-about,
+    .footer-links,
+    .footer-contact {
+        flex: 1;
+        margin: 10px;
+        min-width: 250px;
+    }
+
+    .footer-about h3,
+    .footer-links h3,
+    .footer-contact h3 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+        color: #e1bee7;
+    }
+
+    .footer-about p,
+    .footer-contact p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .footer-links ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-links ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer-links ul li a {
+        color: #f3e5f5;
+        text-decoration: none;
+        font-size: 0.9rem;
+    }
+
+    .footer-links ul li a:hover {
+        color: #d1c4e9;
+        text-decoration: underline;
+    }
+
+    .social-icons a {
+        margin-right: 10px;
+        display: inline-block;
+    }
+
+    .social-icons img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 0.9rem;
+        border-top: 1px solid #7e57c2;
+        padding-top: 10px;
+        color: #d1c4e9;
+    }
+    </style>
+</head>
+<body>
+    <!-- رأس الصفحة -->
+    <header class="main-header">
+        <nav class="container">
+            <h1 class="logo">منصة العمل الجزئي للطلاب</h1>
+            <ul class="nav-links">
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#home">فوائد العمل الجزئي</a></li>
+                <li><a href="job.html">الوظائف</a></li>
+                <li><a href="contactus.html">تواصل معنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- القسم الترحيبي -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>اكسب خبرة وأنت طالب</h1>
+            <p>حلول توظيف متكاملة للعمل بالساعة أو بدوام كلي</p>
+        </div>
+    </section>
+
+    <!-- خطوات البداية -->
+    <section class="section-container">
+        <h2 class="section-title"> كيف تستخدم المنصة  </h2>
+        <div class="cards-container">
+            <div class="card">
+                <img src="https://via.placeholder.com/80" alt="Icon 1">
+                <h3 class="card-title">حدد مجال اهتمامك</h3>
+                <p class="card-description">اختر بين مجموعة متنوعة من المجالات مثل التكنولوجيا، التعليم، أو التسويق.</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/80" alt="Icon 2">
+                <h3 class="card-title">أنشئ حسابك</h3>
+                <p class="card-description">سجل بياناتك الشخصية والمهنية للوصول إلى الفرص المناسبة لك.</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/80" alt="Icon 3">
+                <h3 class="card-title">قدم على الفرص</h3>
+                <p class="card-description">تصفح الوظائف المتاحة وقدم على الفرصة المناسبة لمهاراتك.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم التفاعل -->
+    <section class="get-involved" id="jobs">
+        <h2>طور مهاراتك واكسب الخبرة</h2>
+        <p>اغتنم الفرصة للانضمام إلى مجتمع من الطلاب الذين يعملون على تطوير أنفسهم وتحقيق أهدافهم المهنية.</p>
+        <button class="cta-btn" onclick="startJourney()">استكشف الفرصة الآن</button>
+        </section>
+
+    <!-- تذييل -->
+</section>
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-about">
+            <h3>عن الموقع</h3>
+            <p>منصة العمل الجزئي تهدف إلى تمكين الطلاب من اكتساب الخبرات المهنية أثناء الدراسة من خلال العمل الجزئي في بيئات مرنة ومحفزة.</p>
+        </div>
+        <div class="footer-links">
+            <h3>روابط مفيدة</h3>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="#about">فوائد العمل الجزئي</a></li>
+                <li><a href="job.html">الوظائف</a></li>
+                <li><a href="contactus.html">تواصل معنا</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <h3>تواصل معنا</h3>
+            <p>البريد الإلكتروني: <a href="mailto:info@jobplatform.com">info@jobplatform.com</a></p>
+            <p>الهاتف: <a href="tel:+966500000000">+966 500 000 000</a></p>
+            <div class="social-icons">
+                <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 جميع الحقوق محفوظة. منصة العمل الجزئي.</p>
+    </div>
+</footer>
+
+    <!-- سكربت -->
+    <script>
+        function startJourney() {
+            alert("مرحبًا بك في منصة العمل الجزئي! ابدأ رحلتك الآن.");
+            window.location.href = "opportunities.html";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>العمل الجزئي للطلاب</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/flaticon.css"> <!-- إذا كنت تستخدم CSS -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            line-height: 1.6;
+            text-align: center;
+            padding: 20px;
+        }
+
+.main-header {
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.main-header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f0f0f0;
+}
+        .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh; /* لتحديد ارتفاع الخلفية */
+    background-image: url("https://res.cloudinary.com/dll0wjrzl/image/upload/v1737996528/business-job-interview-concept_bksvya.jpg");
+    background-size: cover; /* لجعل الصورة تغطي الخلفية بالكامل */
+    background-position: center; /* لتوسيط الصورة */
+    background-repeat: no-repeat; /* لمنع تكرار الصورة */
+    color: white; /* نص أبيض ليتناسب مع الخلفية */
+    padding: 0 20px;
+}
+
+        .cta-btn {
+            background-color: white;
+            color: #6a1b9a;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .cta-btn:hover {
+            background-color: #f3e5f5;
+        }
+
+        .features {
+            padding: 40px 20px;
+            background-color: #ede7f6;
+        }
+
+        .features h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #6a1b9a;
+        }
+
+        .feature-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .feature-item {
+            background: #f3e5f5;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin: 10px;
+            flex: 1;
+            max-width: 300px;
+        }
+
+        .jobs-section {
+            background-color: #7b1fa2;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .jobs-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .jobs-header h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .jobs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .job-card {
+            background-color: #6a1b9a;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+
+        .job-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .job-card img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+        }
+
+        .job-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #f3e5f5;
+        }
+
+        .job-card p {
+            font-size: 0.9rem;
+            color: #f3e5f5;
+        }
+
+        .contact {
+            padding: 40px 20px;
+            background-color: #ede7f6;
+        }
+
+        .contact h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #6a1b9a;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .send-btn {
+            background-color: #6a1b9a;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .send-btn:hover {
+            background-color: #4a148c;
+        }
+
+    .main-footer {
+        background: linear-gradient(to right, #6a1b9a, #8e24aa, #ab47bc);
+        color: #f3e5f5;
+        padding: 40px 20px;
+        font-family: "Tajawal", sans-serif;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .footer-about,
+    .footer-links,
+    .footer-contact {
+        flex: 1;
+        margin: 10px;
+        min-width: 250px;
+    }
+
+    .footer-about h3,
+    .footer-links h3,
+    .footer-contact h3 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+        color: #e1bee7;
+    }
+
+    .footer-about p,
+    .footer-contact p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .footer-links ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-links ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer-links ul li a {
+        color: #f3e5f5;
+        text-decoration: none;
+        font-size: 0.9rem;
+    }
+
+    .footer-links ul li a:hover {
+        color: #d1c4e9;
+        text-decoration: underline;
+    }
+
+    .social-icons a {
+        margin-right: 10px;
+        display: inline-block;
+    }
+
+    .social-icons img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 0.9rem;
+        border-top: 1px solid #7e57c2;
+        padding-top: 10px;
+        color: #d1c4e9;
+    }
+    body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
+        }
+        .gallery img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: #8e44ad;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            
+        }
+        .lang-btn-container {
+    display: flex;
+    justify-content: flex-start; /* زر على الجهة اليسرى */
+    padding: 10px 20px; /* مسافة من الحافة */
+     }
+.lang-btn {
+    background: #fff;
+    color: #8e44ad;
+    border: 2px solid #8e44ad;
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+.lang-btn i {
+    font-size: 1.2rem;
+}
+
+        }
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+        .lang-btn {
+            top: 20px; /* المسافة من أعلى الصفحة */
+            left: -1410px; /* المسافة من اليسار */
+            background-color: white; /* لون الخلفية */
+            border: 2px solid #6a1b9a; /* حدود الزر */
+            border-radius: 20px; /* لتقويس الحواف */
+            cursor: pointer; /* تغيير المؤشر عند التمرير فوق الزر */
+            transition: all 0.3s; /* تأثير الحركة عند التفاعل */
+        }
+
+        .lang-btn:hover {
+            background-color:transparent; /* لون الخلفية عند التمرير */
+        }
+        .lang-btn {
+            background: #fff;
+            color: #8e44ad;
+            border: 2px solid #8e44ad;
+            border-radius: 10px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn:hover {
+         color: #007BFF; /* لون الأيقونة عند التمرير */
+        }
+
+        .lang-btn {
+            background: #fff;
+            color: #8e44ad;
+            border: 2px solid #8e44ad;
+            border-radius: 10px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn i {
+            font-size: 1.2rem;
+        }
+
+        .lang-btn:hover {
+            background: #8e44ad;
+            color: white;
+        }
+
+        /* لتوسيط زر تغيير اللغة */
+        .lang-btn-container {
+            display: flex;
+            justify-content: flex-end;
+        }
+   /* تنسيق الشريط */
+   .marquee {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    background: rgba(142, 68, 173, 0.5); /* خلفية بنفسجية مع شفافية */
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 0;
+}
+
+
+        /* الحركة */
+        .marquee span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 10s linear infinite;
+        }
+
+        /* الحركة باستخدام keyframes */
+        @keyframes marquee {
+            from {
+                transform: translateX(30%);
+            }
+            to {
+                transform: translateX(-30%);
+            }
+        }
+</style>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <header class="main-header">
+        <nav class="container">
+            <h1 class="logo">
+                <img src="images/time-management.png" alt="منصة العمل الجزئي للطلاب">
+              </h1>
+            <ul class="nav-links">
+                <li><a id="nav-home" href="#home">الرئيسية</a></li>
+                <li><a id="nav-about" href="#about">فوائد العمل الجزئي</a></li>
+                <li><a id="nav-jobs" href="job.html">الوظائف</a></li>
+                <li><a id="nav-contact" href="contactus.html">تواصل معنا</a></li>
+                <div class="lang-btn-container">
+                <button id="lang-btn" class="lang-btn" onclick="toggleLanguage()">
+                  <i class="fas fa-globe"></i>
+                </button>
+            </ul>
+        </nav>
+    </header>
+    <script>
+         
+        function toggleLanguage() {
+            alert("تم تبديل اللغة!");
+        }
+    </script>
+<body>
+    <!-- الشريط المتحرك -->
+    <div class="marquee">
+        <span> مرحبًا بكم في منصة العمل الجزئي للطلاب! فرص رائعة بانتظاركم - سجلوا الآن!✨ </span>
+    </div>
+    <!-- سكريبت جافا سكريبت -->
+    <script>
+        function toggleLanguage() {
+            alert("تم تبديل اللغة!");
+        }
+    
+        // النصوص باللغتين
+        const translations = {
+            ar: {
+                headerTitle: "العمل الجزئي للطلاب",
+                navHome: "الرئيسية",
+                navAbout: "فوائد العمل الجزئي",
+                navJobs: "الوظائف",
+                navContact: "تواصل معنا",
+                langBtn: "English",
+                pageTitle: "اهداف المنصة",
+                point1: "تمكين الطلاب من اكتساب الخبرات العملية وتنمية مهاراتهم.",
+                point2: "توفير فرص عمل جزئي لتحسين الوضع المالي للطلاب.",
+                point3: "تعزيز ثقافة العمل والاستقلالية الاقتصادية.",
+                point4: "ربط الطلاب بأصحاب العمل عبر منصة موثوقة وسهلة الاستخدام.",
+                point5: "تقديم فرص متنوعة تناسب جميع التخصصات والمهارات.",
+                startNow: "إبدأ الآن",
+                benefitsTitle: "فوائد العمل الجزئي",
+                supportTitle: "دعم مالي",
+                supportDesc: "وفر دخلاً إضافياً يغطي احتياجاتك أثناء الدراسة.",
+                skillsTitle: "تطوير المهارات",
+                skillsDesc: "اكسب مهارات عملية تعزز حياتك المهنية.",
+                timeTitle: "إدارة الوقت",
+                timeDesc: "تعلم كيفية تنظيم وقتك بين العمل والدراسة.",
+                achievementsTitle: "إنجازات تفخر فيها",
+                achievementsDesc: "حقق الانجازات والطموحات وكن على استطلاع دائم بما هو جديد.",
+                jobsHeader: "وظائف مميزة مرنة في أفضل المنشآت بكل مدن السعودية",
+                receptionistTitle: "موظف استقبال",
+                receptionistDesc: "ترحيب الزوار وتقديم المساعدة.",
+                organizerTitle: "منظم فعاليات",
+                organizerDesc: "تنظيم الأحداث والفعاليات.",
+                cashierTitle: "كاشير",
+                cashierDesc: "إدارة عمليات الدفع في المتجر.",
+                assistantTitle: "مساعد إداري",
+                assistantDesc: "دعم العمليات الإدارية اليومية.",
+                shelverTitle: "مصفف أرفف",
+                shelverDesc: "دعم العمليات الإدارية اليومية.",
+                waiterTitle: "مقدم طعام",
+                waiterDesc: "تقديم الطعام في المطاعم.",
+                baristaTitle: "باريستا",
+                baristaDesc: "تحضير القهوة والمشروبات.",
+                salesTitle: "بائع",
+                salesDesc: "بيع المنتجات ومساعدة العملاء.",
+                deliveryTitle: "مندوب توصيل",
+                deliveryDesc: "توصيل الطلبات للعملاء.",
+                programmerTitle: "مبرمج",
+                programmerDesc: "برمجة التطبيقات المختلفة.",
+                contactTitle: "تواصل معنا",
+                contactSubtitle: "لأي استفسارات أو ملاحظات، يمكنك مراسلتنا",
+                labelName: "الاسم:",
+                labelEmail: "البريد الإلكتروني:",
+                labelMessage: "الرسالة:",
+                sendBtn: "إرسال"
+            },
+            en: {
+                headerTitle: "Part-Time Job Platform",
+                navHome: "Home",
+                navAbout: "Benefits of Part-Time Jobs",
+                navJobs: "Jobs",
+                navContact: "Contact Us",
+                langBtn: "العربية",
+                pageTitle: "Platform Goals",
+                point1: "Empowering students to gain practical experience and develop their skills.",
+                point2: "Providing part-time job opportunities to improve students' financial situation.",
+                point3: "Promoting a culture of work and financial independence.",
+                point4: "Connecting students with employers through a trusted and user-friendly platform.",
+                point5: "Offering diverse opportunities suitable for all specializations and skills.",
+                startNow: "Get Started",
+                benefitsTitle: "Benefits of Part-Time Jobs",
+                supportTitle: "Financial Support",
+                supportDesc: "Provide additional income to cover your needs during studies.",
+                skillsTitle: "Skill Development",
+                skillsDesc: "Gain practical skills that enhance your career.",
+                timeTitle: "Time Management",
+                timeDesc: "Learn how to organize your time between work and study.",
+                achievementsTitle: "Achievements to Be Proud Of",
+                achievementsDesc: "Achieve your goals and stay up-to-date with the latest trends.",
+                jobsHeader: "Flexible, Premium Jobs in the Best Establishments Across Saudi Cities",
+                receptionistTitle: "Receptionist",
+                receptionistDesc: "Welcoming visitors and offering assistance.",
+                organizerTitle: "Event Organizer",
+                organizerDesc: "Organizing events and activities.",
+                cashierTitle: "Cashier",
+                cashierDesc: "Managing payment processes in the store.",
+                assistantTitle: "Administrative Assistant",
+                assistantDesc: "Supporting daily administrative operations.",
+                shelverTitle: "Shelf Stocker",
+                shelverDesc: "Supporting daily administrative operations.",
+                waiterTitle: "Waiter",
+                waiterDesc: "Serving food at restaurants.",
+                baristaTitle: "Barista",
+                baristaDesc: "Preparing coffee and beverages.",
+                salesTitle: "Salesperson",
+                salesDesc: "Selling products and assisting customers.",
+                deliveryTitle: "Delivery Person",
+                deliveryDesc: "Delivering orders to customers.",
+                programmerTitle: "Programmer",
+                programmerDesc: "Programming various applications.",
+                contactTitle: "Contact Us",
+                contactSubtitle: "For any inquiries or feedback, feel free to reach out to us",
+                labelName: "Name:",
+                labelEmail: "Email:",
+                labelMessage: "Message:",
+                sendBtn: "Send"
+            }
+        };
+    
+        // اللغة الافتراضية (العربية)
+        let currentLang = "ar";
+    
+        // دالة لتبديل اللغة
+        function toggleLanguage() {
+            // تغيير اللغة الحالية
+            currentLang = currentLang === "ar" ? "en" : "ar";
+    
+            // تحديث النصوص في الصفحة بناءً على اللغة الحالية
+            document.getElementById("header-title").textContent = translations[currentLang].headerTitle;
+            document.getElementById("nav-home").textContent = translations[currentLang].navHome;
+            document.getElementById("nav-about").textContent = translations[currentLang].navAbout;
+            document.getElementById("nav-jobs").textContent = translations[currentLang].navJobs;
+            document.getElementById("nav-contact").textContent = translations[currentLang].navContact;
+            document.getElementById("lang-btn").textContent = translations[currentLang].langBtn;
+            document.getElementById("page-title").textContent = translations[currentLang].pageTitle;
+            document.getElementById("point-1").textContent = translations[currentLang].point1;
+            document.getElementById("point-2").textContent = translations[currentLang].point2;
+            document.getElementById("point-3").textContent = translations[currentLang].point3;
+            document.getElementById("point-4").textContent = translations[currentLang].point4;
+            document.getElementById("point-5").textContent = translations[currentLang].point5;
+            document.getElementById("start-now").textContent = translations[currentLang].startNow;
+    
+            // تحديث النصوص في قسم "فوائد العمل الجزئي"
+            document.getElementById("benefits-title").textContent = translations[currentLang].benefitsTitle;
+            document.getElementById("support-title").textContent = translations[currentLang].supportTitle;
+            document.getElementById("support-desc").textContent = translations[currentLang].supportDesc;
+            document.getElementById("skills-title").textContent = translations[currentLang].skillsTitle;
+            document.getElementById("skills-desc").textContent = translations[currentLang].skillsDesc;
+            document.getElementById("time-title").textContent = translations[currentLang].timeTitle;
+            document.getElementById("time-desc").textContent = translations[currentLang].timeDesc;
+            document.getElementById("achievements-title").textContent = translations[currentLang].achievementsTitle;
+            document.getElementById("achievements-desc").textContent = translations[currentLang].achievementsDesc;
+    
+            // تحديث النصوص في قسم الوظائف
+            document.getElementById("jobs-header").textContent = translations[currentLang].jobsHeader;
+            document.getElementById("job-receptionist-title").textContent = translations[currentLang].receptionistTitle;
+            document.getElementById("job-receptionist-desc").textContent = translations[currentLang].receptionistDesc;
+            document.getElementById("job-organizer-title").textContent = translations[currentLang].organizerTitle;
+            document.getElementById("job-organizer-desc").textContent = translations[currentLang].organizerDesc;
+            document.getElementById("job-cashier-title").textContent = translations[currentLang].cashierTitle;
+            document.getElementById("job-cashier-desc").textContent = translations[currentLang].cashierDesc;
+            document.getElementById("job-assistant-title").textContent = translations[currentLang].assistantTitle;
+            document.getElementById("job-assistant-desc").textContent = translations[currentLang].assistantDesc;
+            document.getElementById("job-shelver-title").textContent = translations[currentLang].shelverTitle;
+            document.getElementById("job-shelver-desc").textContent = translations[currentLang].shelverDesc;
+            document.getElementById("job-waiter-title").textContent = translations[currentLang].waiterTitle;
+            document.getElementById("job-waiter-desc").textContent = translations[currentLang].waiterDesc;
+            document.getElementById("job-barista-title").textContent = translations[currentLang].baristaTitle;
+            document.getElementById("job-barista-desc").textContent = translations[currentLang].baristaDesc;
+            document.getElementById("job-sales-title").textContent = translations[currentLang].salesTitle;
+            document.getElementById("job-sales-desc").textContent = translations[currentLang].salesDesc;
+            document.getElementById("job-delivery-title").textContent = translations[currentLang].deliveryTitle;
+            document.getElementById("job-delivery-desc").textContent = translations[currentLang].deliveryDesc;
+            document.getElementById("job-programmer-title").textContent = translations[currentLang].programmerTitle;
+            document.getElementById("job-programmer-desc").textContent = translations[currentLang].programmerDesc;
+    
+            // تحديث النصوص في صفحة "تواصل معنا" بناءً على اللغة الحالية
+            document.getElementById("contact-title").textContent = translations[currentLang].contactTitle;
+            document.getElementById("contact-subtitle").textContent = translations[currentLang].contactSubtitle;
+            document.getElementById("label-name").textContent = translations[currentLang].labelName;
+            document.getElementById("label-email").textContent = translations[currentLang].labelEmail;
+            document.getElementById("label-message").textContent = translations[currentLang].labelMessage;
+            document.getElementById("send-btn").textContent = translations[currentLang].sendBtn;
+    
+            // تحديث اتجاه الصفحة
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
+        }
+    </script>
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h1 id="page-title">اهداف المنصة</h1>
+        <p id="point-1">تمكين الطلاب من اكتساب الخبرات العملية وتنمية مهاراتهم.</p>
+        <p id="point-2">توفير فرص عمل جزئي لتحسين الوضع المالي للطلاب.</p>
+        <p id="point-3">تعزيز ثقافة العمل والاستقلالية الاقتصادية.</p>
+        <p id="point-4">ربط الطلاب بأصحاب العمل عبر منصة موثوقة وسهلة الاستخدام.</p>
+        <p id="point-5">تقديم فرص متنوعة تناسب جميع التخصصات والمهارات.</p>
+        <a href="job.html"><button class="cta-btn" id="start-now"> البحث عن فرص عمل</button></a>
+    </div>
+</section>
+
+ <!-- About Section -->
+ <section id="about" class="features">
+    <h2 id="benefits-title" data-lang="ar">فوائد العمل الجزئي</h2>
+    
+    <div class="feature-list">
+        <div class="feature-item">
+            <h3 id="support-title" data-lang="ar">دعم مالي</h3>
+            <p id="support-desc" data-lang="ar">وفر دخلاً إضافياً يغطي احتياجاتك أثناء الدراسة.</p>
+        </div>
+
+        <div class="feature-item">
+            <h3 id="skills-title" data-lang="ar">تطوير المهارات</h3>
+            <p id="skills-desc" data-lang="ar">اكسب مهارات عملية تعزز حياتك المهنية.</p>
+        </div>
+
+        <div class="feature-item">
+            <h3 id="time-title" data-lang="ar">إدارة الوقت</h3>
+            <p id="time-desc" data-lang="ar">تعلم كيفية تنظيم وقتك بين العمل والدراسة.</p>
+        </div>
+
+        <div class="feature-item">
+            <h3 id="achievements-title" data-lang="ar">إنجازات تفخر فيها</h3>
+            <p id="achievements-desc" data-lang="ar">حقق الانجازات والطموحات وكن على استطلاع دائم بما هو جديد.</p>
+        </div>
+    </div>
+</section>
+<section id="jobs" class="jobs-section">
+    <div class="jobs-header">
+        <h2 id="jobs-header" lang="ar">وظائف مميزة مرنة في أفضل المنشآت بكل مدن السعودية</h2>
+    </div>
+    <div class="jobs-grid">
+        <div class="job-card">
+            <img src="images/receptionist.png" alt="موظف استقبال">
+
+            <h3 id="job-receptionist-title" lang="ar">موظف استقبال</h3>
+            <p id="job-receptionist-desc" lang="ar">ترحيب الزوار وتقديم المساعدة.</p>
+        </div>
+        <div class="job-card">
+            <img src="images/event-planner.png" alt="منظم فعاليات">
+            <h3 id="job-organizer-title" lang="ar">منظم فعاليات</h3>
+            <p id="job-organizer-desc" lang="ar">تنظيم الأحداث والفعاليات.</p>
+        </div>
+        <div class="job-card">
+            <img src="images/cashier.png" alt="كاشير">
+            <h3 id="job-cashier-title" lang="ar">كاشير</h3>
+            <p id="job-cashier-desc" lang="ar">إدارة عمليات الدفع في المتجر.</p>
+        </div>
+        <div class="job-card">
+            <img src="images/Administrative assistant.png" alt="مساعد إداري">
+            <h3 id="job-assistant-title" lang="ar">مساعد إداري</h3>
+            <p id="job-assistant-desc" lang="ar">دعم العمليات الإدارية اليومية.</p>
+        </div>
+        <div class="job-card">
+            <img src="images/shels-arranger.png" alt="مصفف أرفف">
+            <h3 id="job-shelver-title" lang="ar">مصفف أرفف</h3>
+            <p id="job-shelver-desc" lang="ar">دعم العمليات الإدارية اليومية.</p>
+        </div>
+        <div class="job-card">
+            <img src="images/food-service.png" alt="مقدم طعام">
+            <h3 id="job-waiter-title" lang="ar">مقدم طعام</h3>
+            <p id="job-waiter-desc" lang="ar">تقديم الطعام في المطاعم.</p>
+        </div>
+        <div class="job-card">
+            <img src="images/barista.png" alt="باريستا">
+            <h3 id="job-barista-title" lang="ar">باريستا</h3>
+            <p id="job-barista-desc" lang="ar">تحضير القهوة والمشروبات.</p>
+        </div>
+        <div class="job-card">
+            <img src="images/vendor.png" alt="بائع">
+            <h3 id="job-sales-title" lang="ar">بائع</h3>
+            <p id="job-sales-desc" lang="ar">بيع المنتجات ومساعدة العملاء.</p>
+        </div>
+        <div class="job-card">
+            <img src="images/delivery representative.png" alt="مندوب توصيل">
+            <h3 id="job-delivery-title" lang="ar">مندوب توصيل</h3>
+            <p id="job-delivery-desc" lang="ar">توصيل الطلبات للعملاء.</p>
+        </div>
+        <div class="job-card">
+            <img src="images/programmer.png" alt="مبرمج">
+            <h3 id="job-programmer-title" lang="ar">مبرمج</h3>
+            <p id="job-programmer-desc" lang="ar">برمجة التطبيقات المختلفة.</p>
+        </div>
+    </div>
+</section>
+  
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-about">
+            <h3 id="about-title">عن الموقع</h3>
+            <p id="about-text">منصة العمل الجزئي تهدف إلى تمكين الطلاب من اكتساب الخبرات المهنية أثناء الدراسة من خلال العمل الجزئي في بيئات مرنة ومحفزة.</p>
+        </div>
+        <div class="footer-links">
+            <h3 id="links-title">روابط مفيدة</h3>
+            <ul>
+                <li><a href="home.html" id="home-link">الرئيسية</a></li>
+                <li><a href="home.html" id="benefits-link">فوائد العمل الجزئي</a></li>
+                <li><a href="job.html" id="jobs-link">الوظائف</a></li>
+                <li><a href="contactus.html" id="contact-link">تواصل معنا</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <h3 id="contact-title">تواصل معنا</h3>
+            <p id="email-text">البريد الإلكتروني: <a href="mailto:info@jobplatform.com">info@jobplatform.com</a></p>
+            <p id="phone-text">الهاتف: <a href="tel:+966500000000">+966 500 000 000</a></p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p id="copyright">&copy; 2025 جميع الحقوق محفوظة. منصة العمل الجزئي.</p>
+    </div>
+</footer>
+
+   
+</body>
+</html>

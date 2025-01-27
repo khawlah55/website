@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فرص العمل الجزئي</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/flaticon.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .main-header {
+            background: linear-gradient(135deg, #9b59b6, #8e44ad);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .main-header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-links li {
+            margin: 0;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #f0f0f0;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            margin: 15px;
+            display: inline-block;
+            width: 250px;
+        }
+
+        .card h3 {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #8e44ad;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background: #8e44ad;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #9b59b6;
+        }
+
+        /* مربع الحوار */
+        .dialog-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .dialog-box {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 300px;
+        }
+
+        .dialog-box h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .dialog-box button {
+            padding: 10px 20px;
+            background: #8e44ad;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .dialog-box button:hover {
+            background: #9b59b6;
+        }
+        .card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            margin: 15px;
+            display: inline-block;
+            width: 250px;
+        }
+
+        .card h3 {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #8e44ad;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background: #8e44ad;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #9b59b6;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        form input, form textarea {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            background: #8e44ad;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        form button:hover {
+            background: #732d91;
+        }
+
+        /* تصميم النافذة المنبثقة */
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            text-align: center;
+            display: none;
+            z-index: 1000;
+        }
+
+        .popup h3 {
+            margin-bottom: 10px;
+        }
+
+        .popup button {
+            background: #8e44ad;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .popup button:hover {
+            background: #732d91;
+        }
+
+        /* تغطية الشاشة عند ظهور النافذة */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            display: none;
+        }
+        .main-footer {
+        background: linear-gradient(to right, #6a1b9a, #8e24aa, #ab47bc);
+        color: #f3e5f5;
+        padding: 40px 20px;
+        font-family: "Tajawal", sans-serif;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .footer-about,
+    .footer-links,
+    .footer-contact {
+        flex: 1;
+        margin: 10px;
+        min-width: 250px;
+    }
+
+    .footer-about h3,
+    .footer-links h3,
+    .footer-contact h3 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+        color: #e1bee7;
+    }
+
+    .footer-about p,
+    .footer-contact p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .footer-links ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-links ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer-links ul li a {
+        color: #f3e5f5;
+        text-decoration: none;
+        font-size: 0.9rem;
+    }
+
+    .footer-links ul li a:hover {
+        color: #d1c4e9;
+        text-decoration: underline;
+    }
+
+    .social-icons a {
+        margin-right: 10px;
+        display: inline-block;
+    }
+
+    .social-icons img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 0.9rem;
+        border-top: 1px solid #7e57c2;
+        padding-top: 10px;
+        color: #d1c4e9;
+    }
+
+header {
+    background: #8e44ad;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.lang-btn-container {
+    display: flex;
+    justify-content: flex-start; /* زر على الجهة اليسرى */
+    padding: 10px 20px; /* مسافة من الحافة */
+}
+
+.lang-btn {
+    background: #fff;
+    color: #8e44ad;
+    border: 2px solid #8e44ad;
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.lang-btn i {
+    font-size: 1.2rem;
+}
+
+.lang-btn:hover {
+    background: #8e44ad;
+    color: white;
+}
+/* محاذاة النصوص في المنتصف */
+#contact-title, #contact-subtitle {
+    text-align: center;
+}
+.button-container {
+        display: flex;
+        justify-content: center;
+        gap: 10px; /* المسافة بين الأزرار */
+    }
+
+    #send-btn {
+        padding: 10px 20px;
+    }
+
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="container">
+            <h1 class="logo">
+                <img src="images/time-management.png" alt="منصة العمل الجزئي للطلاب">
+              </h1>          
+               <ul class="nav-links">
+                <li><a id="nav-home" href="index.html">الرئيسية</a></li>
+                <li><a id="nav-about" href="index.html">فوائد العمل الجزئي</a></li>
+                <li><a id="nav-jobs" href="job.html">الوظائف</a></li>
+                <li><a id="nav-contact" href="contactus.html">تواصل معنا</a></li>
+                <div class="lang-btn-container">
+                <button id="lang-btn" class="lang-btn" onclick="switchLanguage()">
+                  <i class="fas fa-globe"></i>
+                </button>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- محتوى الصفحة -->
+    <div class="container">
+        <h2 id="contact-title">تواصل معنا</h2>
+        <p id="contact-subtitle">لأي استفسارات أو ملاحظات، يمكنك مراسلتنا</p>
+    
+        <form onsubmit="showPopup(event)">
+            <label id="label-name" for="name">الاسم:</label>
+            <input type="text" id="name" name="name" placeholder="أدخل اسمك" required>
+    
+            <label id="label-email" for="email">البريد الإلكتروني:</label>
+            <input type="email" id="email" name="email" placeholder="أدخل بريدك الإلكتروني" required>
+    
+            <label id="label-message" for="message">الرسالة:</label>
+            <textarea id="message" name="message" placeholder="أدخل رسالتك هنا..." required></textarea>
+    
+            <div class="button-container">
+                <button id="send-btn" type="submit">إرسال</button>
+                <a href="index.html">
+                    <button id="send-btn" type="button">الصفحة السابقة</button>
+                </a>
+            </div>
+        </form>
+    </div>
+    
+    <!-- النافذة المنبثقة -->
+    <div class="overlay" id="overlay"></div>
+    <div class="popup" id="popup">
+        <h3>تم إرسال رسالتك بنجاح! 🎉</h3>
+        <p>شكرًا لتواصلك معنا. سنتواصل معك قريبًا.</p>
+        <button onclick="closePopup()">إغلاق</button>
+    </div>
+    
+    <!-- سكريبت جافا سكريبت -->
+    <script>
+       // اللغة الحالية
+let currentLanguage = 'ar';  // البداية بالعربية
+
+// النصوص باللغتين
+const translations = {
+    ar: {
+        headerTitle: "العمل الجزئي للطلاب",
+        navHome: "الرئيسية",
+        navAbout: "فوائد العمل الجزئي",
+        navJobs: "الوظائف",
+        navContact: "تواصل معنا",
+        langBtn: "English",
+        contactTitle: 'تواصل معنا',
+        contactSubtitle: 'لأي استفسارات أو ملاحظات، يمكنك مراسلتنا',
+        labelName: 'الاسم:',
+        labelEmail: 'البريد الإلكتروني:',
+        labelMessage: 'الرسالة:',
+        sendButton: 'إرسال',
+        backButton: 'الصفحة السابقة',
+        popupMessage: 'تم إرسال رسالتك بنجاح! 🎉',
+        popupDescription: 'شكرًا لتواصلك معنا. سنتواصل معك قريبًا.',
+        closePopup: 'إغلاق'
+    },
+    en: {
+        headerTitle: "Part-Time Job Platform",
+        navHome: "Home",
+        navAbout: "Benefits of Part-Time Jobs",
+        navJobs: "Jobs",
+        navContact: "Contact Us",
+        langBtn: "العربية",
+        contactTitle: 'Contact Us',
+        contactSubtitle: 'For any inquiries or feedback, feel free to reach out to us',
+        labelName: 'Name:',
+        labelEmail: 'Email:',
+        labelMessage: 'Message:',
+        sendButton: 'Send',
+        backButton: 'Back to Home',
+        popupMessage: 'Your message has been sent successfully! 🎉',
+        popupDescription: 'Thank you for reaching out. We will get back to you soon.',
+        closePopup: 'Close'
+    }
+};
+
+// دالة التبديل بين اللغات
+function switchLanguage() {
+    // التبديل بين اللغتين
+    currentLanguage = currentLanguage === 'ar' ? 'en' : 'ar';
+
+    // تحديث النصوص في الصفحة بناءً على اللغة الحالية
+    document.getElementById("header-title").textContent = translations[currentLanguage].headerTitle;
+    document.getElementById("nav-home").textContent = translations[currentLanguage].navHome;
+    document.getElementById("nav-about").textContent = translations[currentLanguage].navAbout;
+    document.getElementById("nav-jobs").textContent = translations[currentLanguage].navJobs;
+    document.getElementById("nav-contact").textContent = translations[currentLanguage].navContact;
+    document.getElementById("lang-btn").textContent = translations[currentLanguage].langBtn;
+
+    // تحديث النصوص في نموذج "تواصل معنا"
+    document.getElementById('contact-title').textContent = translations[currentLanguage].contactTitle;
+    document.getElementById('contact-subtitle').textContent = translations[currentLanguage].contactSubtitle;
+    document.getElementById('label-name').textContent = translations[currentLanguage].labelName;
+    document.getElementById('label-email').textContent = translations[currentLanguage].labelEmail;
+    document.getElementById('label-message').textContent = translations[currentLanguage].labelMessage;
+    document.getElementById('send-btn').textContent = translations[currentLanguage].sendButton;
+    document.querySelector('a button').textContent = translations[currentLanguage].backButton;
+
+    // تحديث النصوص في النافذة المنبثقة
+    document.querySelector('.popup h3').textContent = translations[currentLanguage].popupMessage;
+    document.querySelector('.popup p').textContent = translations[currentLanguage].popupDescription;
+    document.querySelector('.popup button').textContent = translations[currentLanguage].closePopup;
+}
+
+// استدعاء التبديل عند تحميل الصفحة
+document.addEventListener('DOMContentLoaded', switchLanguage);
+
+    
+        // إظهار النافذة المنبثقة عند إرسال النموذج
+        function showPopup(event) {
+            event.preventDefault();
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('popup').style.display = 'block';
+        }
+    
+        // إغلاق النافذة المنبثقة
+        function closePopup() {
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('popup').style.display = 'none';
+        }
+    
+        // استدعاء التبديل عند تحميل الصفحة
+        document.addEventListener('DOMContentLoaded', switchLanguage);
+    </script>    
+<footer class="main-footer">
+  <div class="footer-container">
+      <div class="footer-about">
+          <h3 id="about-title">عن الموقع</h3>
+          <p id="about-text">منصة العمل الجزئي تهدف إلى تمكين الطلاب من اكتساب الخبرات المهنية أثناء الدراسة من خلال العمل الجزئي في بيئات مرنة ومحفزة.</p>
+      </div>
+      <div class="footer-links">
+          <h3 id="links-title">روابط مفيدة</h3>
+          <ul>
+              <li><a href="#home" id="home-link">الرئيسية</a></li>
+              <li><a href="#about" id="benefits-link">فوائد العمل الجزئي</a></li>
+              <li><a href="job.html" id="jobs-link">الوظائف</a></li>
+              <li><a href="contactus.html" id="contact-link">تواصل معنا</a></li>
+          </ul>
+      </div>
+      <div class="footer-contact">
+          <h3 id="contact-title">تواصل معنا</h3>
+          <p id="email-text">البريد الإلكتروني: <a href="mailto:info@jobplatform.com">info@jobplatform.com</a></p>
+          <p id="phone-text">الهاتف: <a href="tel:+966500000000">+966 500 000 000</a></p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+  </div>
+  <div class="footer-bottom">
+      <p id="copyright">&copy; 2025 جميع الحقوق محفوظة. منصة العمل الجزئي.</p>
+  </div>
+</footer>
+</html>

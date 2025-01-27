@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل البيانات</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .main-header {
+            background: linear-gradient(135deg, #9b59b6, #8e44ad);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .main-header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-links li {
+            margin: 0;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #f0f0f0;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .form-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+            color: #8e44ad; /* لون بنفسجي متناسق */
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            font-size: 1rem;
+            margin-bottom: 5px;
+            display: block;
+            color: #333; /* لون النص */
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+        }
+
+        .btn {
+            background-color: #27ae60; /* لون أخضر متناسق */
+            color: white;
+            padding: 12px 20px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #2ecc71; /* لون أخضر فاتح */
+        }
+
+        .back-btn {
+            background-color: #8e44ad; /* لون بنفسجي متناسق */
+            color: white;
+            padding: 12px 20px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .back-btn:hover {
+            background-color: #9b59b6; /* لون بنفسجي فاتح */
+        }
+        .main-footer {
+        background: linear-gradient(to right, #6a1b9a, #8e24aa, #ab47bc);
+        color: #f3e5f5;
+        padding: 40px 20px;
+        font-family: "Tajawal", sans-serif;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .footer-about,
+    .footer-links,
+    .footer-contact {
+        flex: 1;
+        margin: 10px;
+        min-width: 250px;
+    }
+
+    .footer-about h3,
+    .footer-links h3,
+    .footer-contact h3 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+        color: #e1bee7;
+    }
+
+    .footer-about p,
+    .footer-contact p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .footer-links ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-links ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer-links ul li a {
+        color: #f3e5f5;
+        text-decoration: none;
+        font-size: 0.9rem;
+    }
+
+    .footer-links ul li a:hover {
+        color: #d1c4e9;
+        text-decoration: underline;
+    }
+
+    .social-icons a {
+        margin-right: 10px;
+        display: inline-block;
+    }
+
+    .social-icons img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 0.9rem;
+        border-top: 1px solid #7e57c2;
+        padding-top: 10px;
+        color: #d1c4e9;
+    }
+    header {
+    background: #8e44ad;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.lang-btn-container {
+    display: flex;
+    justify-content: flex-start; /* زر على الجهة اليسرى */
+    padding: 10px 20px; /* مسافة من الحافة */
+}
+
+.lang-btn {
+    background: #fff;
+    color: #8e44ad;
+    border: 2px solid #8e44ad;
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.lang-btn i {
+    font-size: 1.2rem;
+}
+
+.lang-btn:hover {
+    background: #8e44ad;
+    color: white;
+}
+    </style>
+</head>
+<header class="main-header">
+    <nav class="container">
+        <h1 class="logo">
+            <img src="images/time-management.png" alt="منصة العمل الجزئي للطلاب">
+          </h1>       
+           <ul class="nav-links">
+            <li><a id="nav-home" href="index.html">الرئيسية</a></li>
+            <li><a id="nav-about" href="index.html">فوائد العمل الجزئي</a></li>
+            <li><a id="nav-jobs" href="job.html">الوظائف</a></li>
+            <li><a id="nav-contact" href="contactus.html">تواصل معنا</a></li>
+        </ul>
+        <!-- زر تبديل اللغة -->
+        <div class="lang-btn-container">
+            <button id="lang-btn" class="lang-btn" onclick="switchLanguage()">
+                <i class="fas fa-globe"></i>
+            </button>
+        </div>
+    </nav>
+</header>
+<div class="form-container">
+    <h2 id="form-title">تسجيل البيانات</h2>
+    <form id="volunteerForm">
+        <div class="form-group">
+            <label id="label-name" for="name">الاسم الكامل:</label>
+            <input type="text" id="name" name="name" required placeholder="أدخل اسمك الكامل">
+        </div>
+        <div class="form-group">
+            <label id="label-email" for="email">البريد الإلكتروني:</label>
+            <input type="email" id="email" name="email" required placeholder="أدخل بريدك الإلكتروني">
+        </div>
+        <div class="form-group">
+            <label id="label-phone" for="phone">رقم الهاتف:</label>
+            <input type="tel" id="phone" name="phone" required placeholder="أدخل رقم هاتفك">
+        </div>
+        <div class="form-group">
+            <label id="label-area" for="area">المنطقة:</label>
+            <input type="text" id="area" name="area" required placeholder="أدخل منطقتك">
+        </div>
+        <div class="form-group">
+            <label id="label-interest" for="interest">مجال العمل المفضل:</label>
+            <select id="interest" name="interest" required>
+                <option value="cashier">كاشير</option>
+                <option value="admin-assist">مساعدة إدارية</option>
+                <option value="food-server">مقدم طعام</option>
+                <option value="receptionist">موظف استقبال</option>
+                <option value="event-organizer">منظم فعاليات</option>
+                <option value="shelf-stocker">مصفف أرفف</option>
+                <option value="barista">باريستا</option>
+                <option value="salesperson">بائع</option>
+                <option value="delivery">مندوب توصيل</option>
+                <option value="programmer">مبرمج</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label id="label-message" for="message">رسالة أو تعليق (اختياري):</label>
+            <textarea id="message" name="message" placeholder="أدخل أي تعليق أو رسالة"></textarea>
+        </div>
+        <button id="submit-btn" type="submit" class="btn">تسجيل</button>
+    </form>
+
+    <!-- زر العودة للصفحة الرئيسية -->
+    <button id="back-btn" class="back-btn" onclick="window.location.href='index.html'">العودة إلى الصفحة الرئيسية</button>
+</div>
+<script>
+// عند إرسال النموذج
+document.getElementById('volunteerForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // منع الإرسال الافتراضي للنموذج
+    // هنا يمكنك إضافة عملية تحقق إضافية إذا لزم الأمر
+    window.location.href = 'success.html'; // الانتقال إلى صفحة النجاح
+});
+
+// النصوص المتعددة اللغات
+const translations = {
+    ar: {
+        headerTitle: "العمل الجزئي للطلاب",
+        navHome: "الرئيسية",
+        navAbout: "فوائد العمل الجزئي",
+        navJobs: "الوظائف",
+        navContact: "تواصل معنا",
+        langBtn: "English",
+        formTitle: "تسجيل البيانات",
+        labelName: "الاسم الكامل:",
+        labelEmail: "البريد الإلكتروني:",
+        labelPhone: "رقم الهاتف:",
+        labelArea: "المنطقة:",
+        labelInterest: "مجال العمل المفضل:",
+        labelMessage: "رسالة أو تعليق (اختياري):",
+        submitButton: "تسجيل",
+        backButton: "العودة إلى الصفحة الرئيسية"
+    },
+    en: {
+        headerTitle: "Part-Time Job Platform",
+        navHome: "Home",
+        navAbout: "Benefits of Part-Time Jobs",
+        navJobs: "Jobs",
+        navContact: "Contact Us",
+        langBtn: "العربية",
+        formTitle: "Data Registration",
+        labelName: "Full Name:",
+        labelEmail: "Email:",
+        labelPhone: "Phone Number:",
+        labelArea: "Area:",
+        labelInterest: "Preferred Field:",
+        labelMessage: "Message or Comment (Optional):",
+        submitButton: "Register",
+        backButton: "Back to Home"
+    }
+};
+
+// اللغة الافتراضية
+let currentLanguage = 'ar';
+
+// دالة تبديل اللغة
+function switchLanguage() {
+    // تبديل اللغة بين العربية والإنجليزية
+    currentLanguage = currentLanguage === 'ar' ? 'en' : 'ar';
+
+    // تحديث النصوص في الصفحة بناءً على اللغة الحالية
+    document.getElementById("header-title").textContent = translations[currentLanguage].headerTitle;
+    document.getElementById("nav-home").textContent = translations[currentLanguage].navHome;
+    document.getElementById("nav-about").textContent = translations[currentLanguage].navAbout;
+    document.getElementById("nav-jobs").textContent = translations[currentLanguage].navJobs;
+    document.getElementById("nav-contact").textContent = translations[currentLanguage].navContact;
+    document.getElementById("lang-btn").innerHTML = `<i class="fas fa-globe"></i> ${translations[currentLanguage].langBtn}`;
+    document.getElementById("form-title").textContent = translations[currentLanguage].formTitle;
+    document.getElementById("label-name").textContent = translations[currentLanguage].labelName;
+    document.getElementById("label-email").textContent = translations[currentLanguage].labelEmail;
+    document.getElementById("label-phone").textContent = translations[currentLanguage].labelPhone;
+    document.getElementById("label-area").textContent = translations[currentLanguage].labelArea;
+    document.getElementById("label-interest").textContent = translations[currentLanguage].labelInterest;
+    document.getElementById("label-message").textContent = translations[currentLanguage].labelMessage;
+    document.getElementById("submit-btn").textContent = translations[currentLanguage].submitButton;
+    document.getElementById("back-btn").textContent = translations[currentLanguage].backButton;
+}
+
+</script>
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-about">
+            <h3 id="about-title">عن الموقع</h3>
+            <p id="about-text">منصة العمل الجزئي تهدف إلى تمكين الطلاب من اكتساب الخبرات المهنية أثناء الدراسة من خلال العمل الجزئي في بيئات مرنة ومحفزة.</p>
+        </div>
+        <div class="footer-links">
+            <h3 id="links-title">روابط مفيدة</h3>
+            <ul>
+                <li><a href="index.html" id="home-link">الرئيسية</a></li>
+                <li><a href="index.html" id="benefits-link">فوائد العمل الجزئي</a></li>
+                <li><a href="job.html" id="jobs-link">الوظائف</a></li>
+                <li><a href="contactus.html" id="contact-link">تواصل معنا</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <h3 id="contact-title">تواصل معنا</h3>
+            <p id="email-text">البريد الإلكتروني: <a href="mailto:info@jobplatform.com">info@jobplatform.com</a></p>
+            <p id="phone-text">الهاتف: <a href="tel:+966500000000">+966 500 000 000</a></p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p id="copyright">&copy; 2025 جميع الحقوق محفوظة. منصة العمل الجزئي.</p>
+    </div>
+</footer>
+</body>
+</html>
